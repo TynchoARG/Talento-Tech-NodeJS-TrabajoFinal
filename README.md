@@ -82,4 +82,4 @@ Ejemplo de Body (`POST /api/products/create`):
 
 ## Autor
 
-* **Martín Zabala** - Proyecto Final Backend Node.js
+* **Martín Zabala** - Proyecto Final Backend Node JS
