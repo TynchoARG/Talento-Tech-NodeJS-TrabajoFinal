@@ -1,29 +1,31 @@
-// array con productos de prueba / hardcodeados
+import {
+    getAllProducts,
+    getProductByID,
+    saveProduct,
+    deleteProduct
+} from '../models/products.model.js'
+
+
+/* // array con productos de prueba / hardcodeados
 const testProducts = [
     { id: '1', title: 'Mouse Gamer', price: 25000, category: 'perifericos' },
     { id: '2', title: 'Monitor 24"', price: 180000, category: 'monitores' }
-]
+] 
+*/
 
-export const getAllProductsService = () => {
-    return testProducts;
+
+export const getAllProductsService = async () => {
+    return await getAllProducts();
 };
 
-export const getProductByIdService = (id) => {
-    return testProducts.find((product) => product.id === id); 
+export const getProductByIdService = async(id) => {
+    return await getProductByID(id);
 };
 
-export const createProductService = (productData) => {
-    const newProduct = {
-        id: String(testProducts.length + 1),
-        ...productData
-    };
-    testProducts.push(newProduct);
-    return newProduct;
+export const createProductService =  async (productData) => {
+    return await saveProduct(productData);
 };
 
-export const deleteProductService = (id) => {
-    const index = testProducts.findIndex((product) => product.id === id);
-    if (index === -1) return false;
-    testProducts.splice(index, 1);
-    return true;
+export const deleteProductService = async (id) => {
+    return await deleteProduct(id);
 };
