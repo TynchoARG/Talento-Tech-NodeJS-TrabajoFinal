@@ -11,7 +11,7 @@ export const authentication = (req, res, next) => {
       .json({ message: "Token no proporcionado (Error 401)" });
   }
   //2. Separación de la palabra "Bearer" del token real.
-  const token = authHeader.split("")[1];
+  const token = authHeader.split(" ")[1];
 
   if (!token) {
     return res.status(401).json({ message: "Formato inválido (Error 401)" });
