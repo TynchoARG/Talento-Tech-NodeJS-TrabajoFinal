@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import "dotenv";
+import "dotenv/config";
 
 export const authentication = (req, res, next) => {
   // 1. Leer el encabezado de Authorization
