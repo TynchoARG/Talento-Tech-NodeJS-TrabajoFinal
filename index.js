@@ -21,13 +21,8 @@ app.use(cors());
 // |---> Middleware para interpretar lo del "body" en formato JSON
 app.use(bodyParser.json());
 
-/*
-// Ruta de prueba inicial
-app.get('/', (req, res) => {
-    res.send('API de Catálogo de productos funcionando correctamente.');
-});
-*/
 
+// Nueva ruta con estilos y HTML
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
