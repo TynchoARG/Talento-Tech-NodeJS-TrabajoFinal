@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import 'dotenv';
+import 'dotenv/config';
 
 export const loginService = (email, password) => {
   // Se validan las credenciales.
